@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ivgi
+namespace StalconLib
 {
     class Tour
     {
@@ -42,9 +42,13 @@ namespace Ivgi
         {
             double path = 0;
             for (int i = 0; i < places.Length - 1; i++)
-                if (Utils.Distance(places[i], places[i + 1]) > path)
-                    path = Utils.Distance(places[i], places[i + 1]);
+                if (Distance(places[i], places[i + 1]) > path)
+                    path = Distance(places[i], places[i + 1]);
             return path;
+        }
+        public double Distance(Point p1, Point p2)
+        {
+            return Math.Sqrt(Math.Pow(p1.GetX() - p2.GetX(), 2) + Math.Pow(p1.GetY() - p2.GetY(), 2));
         }
     }
 }
