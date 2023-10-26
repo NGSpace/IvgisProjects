@@ -6,7 +6,7 @@ namespace Rooms {
       public int roomType;
       public int nightReserved;
 
-      public Hahsaniya(int n, int t, int re)
+      public Room(int n, int t, int re)
       {
           roomNum = n;
           roomType = t;
